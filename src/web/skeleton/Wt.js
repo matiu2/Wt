@@ -1877,8 +1877,10 @@ this.positionAtWidget = function(id, atId, orientation, delta) {
     $(w).addClass('wt-reparented');
     // Put any data back into the new child so that WSuggestionPopup and
     // similar widgets will still work
-    if (tmp != null)
-      jQuery.data($('#' + w.id)[0], tmp);
+    if (tmp != null) {
+      var eles = $('#' + w.id);
+      jQuery.data(eles[eles.length - 1], tmp);
+    }
   }
 
   WT.fitToWindow(w, x, y, rightx, bottomy);

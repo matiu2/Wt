@@ -6,7 +6,7 @@
  */
 #include "Wt/WComboBox.h"
 #include "Wt/WLogger.h"
-#include "Wt/WStringListModel.h"
+  #include "Wt/WStringListModel.h"
 
 #include "DomElement.h"
 #include "WebUtils.h"
